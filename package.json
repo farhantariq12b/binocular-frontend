@@ -1,11 +1,18 @@
 {
-  "name": "binocular_frontend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "binocular",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "bootstrap": "^4.5.2",
+    "next": "9.5.3",
+    "react": "16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "16.13.1"
+  }
 }
