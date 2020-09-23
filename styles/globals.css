@@ -95,6 +95,11 @@ a {
 .main-navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.page-heading {
+  width: 25%;
 }
 .page-heading h3 {
   color: #636363;
@@ -135,6 +140,8 @@ a {
 }
 .navbar-content {
   display: flex;
+  width: 75%;
+  justify-content: space-between;
 }
 .year-title {
   font-weight: 600;
@@ -246,8 +253,9 @@ a {
 .graphs-part {
   width: 75%;
 }
-.big-cart img {
-  width: 100%;
+.big-cart {
+  left: 60px;
+  position: relative;
 }
 
 
@@ -465,7 +473,7 @@ background-color:  #FFE2E2;
   position: relative;
 }
 .dropdown-btn1 {
-  width: 220px;
+  width: 200px;
   text-align: left;
   background: #EDEEEF;
   border-radius: 38px;
@@ -529,3 +537,103 @@ background-color:  #FFE2E2;
 
 
 
+@media (min-width:  1280px) and (max-width: 1566px) {
+  .navbar-social li svg {
+    width: 15px;
+  }
+  .page-heading {
+    width: 20%;
+  }
+  .navbar-content {
+    width: 80%;
+  }
+  .main-navbar-link a {
+    font-size: 12px;
+    padding: 3px 7px;
+  }
+  .page-heading h3 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .navbar-social li {
+    padding: 0 10px;
+  }
+  .item-bg-1 p, .item-bg-2 p, .item-bg-3 p {
+    font-size: 15px;
+  }
+  .revenue-part {
+    width: 35%;
+  }
+  .revenue-title {
+    font-size: 37px;
+  }
+  .record-btn {
+    padding: 1px 12px;
+    font-size: 12px;
+    margin-top: 11px;
+  }
+  .project-cart img {
+    max-width: 100%;
+  }
+  .point-units h3 {
+    font-size: 16px;
+  }
+  .point-units p {
+    padding: 7px 0;
+    font-size: 12px;
+  }
+  .record-title {
+    font-size: 55px;
+  }
+  .record-subtitle {
+    font-size: 12px;
+  }
+  .dropdown-btn1 {
+    width: 140px;
+    height: 29px;
+  }
+  .dropdown-list a {
+    font-size: 12px;
+  }
+  .dropdown-btn1::after {
+    left: 86%;
+    top: 10px;
+  }
+  .dropdown-list {
+    top: 29px;
+  }
+  .sidelink a {
+    padding: 1px 14px;
+    margin: 7px 0;
+  }
+  .record-link a {
+    font-size: 12px;
+  }
+}
+@media (min-width:  1024px) and (max-width: 1279px) {
+  .main-wrapper {
+    padding: 17px;
+  }
+  .main-navbar {
+    flex-wrap: wrap;
+  }
+  .page-heading {
+    width: 100%;
+  }
+  .navbar-content {
+    width: 100%;
+  }
+  .dropdown-btn1 {
+    width: 150px;
+  }
+  .navbar-social li svg {
+    width: 15px;
+  }
+  .logo img, .menu img {
+    width: 80%;
+  }
+  .sidelink a {
+    font-size: 15px;
+    padding: 0px 15px;
+  }
+}

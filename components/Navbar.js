@@ -1,5 +1,11 @@
-
-function Navbar() {
+import MyComponent from "./datepicker"
+import React from "react"
+class Navbar extends React.Component {
+  constructor (props) {
+    super(props);
+  }
+ 
+  render(){
   return <div>
     <div className="main-navbar">
       <div className="page-heading">
@@ -23,10 +29,7 @@ function Navbar() {
                 <a href="#">dropdown 04</a>
               </li>
             </ul>
-          </div>
-        </div>
-        <div className="main-navbar-link">
-          <ul>
+          </div>  {/* <ul>
             <li>
               <a href="#">Week</a>
             </li>
@@ -39,7 +42,10 @@ function Navbar() {
             <li>
               <a href="#">Custom</a>
             </li>
-          </ul>
+          </ul> */}
+        </div>
+        <div className="main-navbar-link">
+          <MyComponent callbackhandle={this.props.props}/>
         </div>
         <div className="main-navbar-dropdown">
           <div className="dropdown-items">
@@ -91,6 +97,7 @@ function Navbar() {
       </div>
     </div>
   </div>
+  }
 }
 
 export default Navbar
