@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "env next dev",
+    "build": "env next build",
+    "start": "env next start"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -13,6 +13,7 @@
     "bootstrap": "^4.5.2",
     "bootstrap-daterangepicker": "^3.1.0",
     "date-fns": "^2.16.1",
+    "dotenv": "^8.2.0",
     "jquery": "^3.5.1",
     "moment": "^2.28.0",
     "next": "9.5.3",

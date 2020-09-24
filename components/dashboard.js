@@ -23,6 +23,7 @@ class  Dasboard extends React.Component {
   }
   //callback for datepicker
   handleCallback = (start, end)=> {
+    console.log(process.env.SERVER_URL,"process")
     
     var Difference_In_Time =end._d.getTime()- start._d.getTime() ; 
     var Difference_In_Days =Math.ceil( Difference_In_Time / (1000 * 3600 * 24)); 
@@ -37,7 +38,7 @@ class  Dasboard extends React.Component {
       d.setDate(d.getDate() + 1);  
       
     }
-    axios.get(`http://192.168.100.29:3001/api/orders?dates=${data}`)
+    axios.get(`${process.env.SERVER_URL}/api/orders?dates=${data}`)
     .then(res => {
      const orders  = res.data;
      this.setState({ orders });
@@ -76,7 +77,7 @@ class  Dasboard extends React.Component {
 
   
 
-    axios.get(`http://192.168.100.29:3001/api/orders`)
+    axios.get(`${process.env.SERVER_URL}/api/orders`)
     .then(res => {
       const orders = res.data;
       this.setState({ orders });
@@ -86,7 +87,7 @@ class  Dasboard extends React.Component {
       console.log(err)
     })
 
-      axios.get(`http://192.168.100.29:3001/api/products/slow`)
+      axios.get(`${process.env.SERVER_URL}/api/products/slow`)
       .then(res => {
         const slow = res.data;
         this.setState({ slow });
@@ -95,7 +96,7 @@ class  Dasboard extends React.Component {
       .catch(err =>{
         console.log(err)
       })
-      axios.get(`http://192.168.100.29:3001/api/products/reorder`)
+      axios.get(`${process.env.SERVER_URL}/api/products/reorder`)
       .then(res => {
         const reorder = res.data;
         this.setState({ reorder });
@@ -105,7 +106,7 @@ class  Dasboard extends React.Component {
         console.log(err)
       })
 
-      axios.get(`http://192.168.100.29:3001/api/products/projected`)
+      axios.get(`${process.env.SERVER_URL}/api/products/projected`)
       .then(res => {
         const projected = res.data;
         this.setState({ projected });
@@ -114,7 +115,7 @@ class  Dasboard extends React.Component {
         console.log(err)
       })
 
-      axios.get(`http://192.168.100.29:3001/api/products`)
+      axios.get(`${process.env.SERVER_URL}/api/products`)
       .then(res => {
         const products = res.data;
         this.setState({ products });
@@ -142,7 +143,7 @@ class  Dasboard extends React.Component {
       let new_end= `${en_date[0]}-${en_date[1]}-${en_date[2]}`
     
           
-      axios.get(`http://192.168.100.29:3001/api/orders?start_date=${new_start}&end_date=${new_end}`)
+      axios.get(`${process.env.SERVER_URL}/api/orders?start_date=${new_start}&end_date=${new_end}`)
       .then(res => {
       const weekly = res.data;
       this.setState({ weekly });
@@ -170,7 +171,7 @@ class  Dasboard extends React.Component {
       let lnew_end= `${len_date[0]}-${len_date[1]}-${len_date[2]}`
     
           
-      axios.get(`http://192.168.100.29:3001/api/orders?start_date=${lnew_start}&end_date=${lnew_end}`)
+      axios.get(`${process.env.SERVER_URL}/api/orders?start_date=${lnew_start}&end_date=${lnew_end}`)
       .then(res => {
       const lastweekly = res.data;
       this.setState({ lastweekly });
@@ -197,7 +198,7 @@ class  Dasboard extends React.Component {
     let mnew_end= `${men_date[0]}-${men_date[1]}-${men_date[2]}`
   
         
-    axios.get(`http://192.168.100.29:3001/api/orders?start_date=${mnew_start}&end_date=${mnew_end}`)
+    axios.get(`${process.env.SERVER_URL}/api/orders?start_date=${mnew_start}&end_date=${mnew_end}`)
     .then(res => {
     const monthly = res.data;
     this.setState({ monthly });
@@ -224,7 +225,7 @@ class  Dasboard extends React.Component {
     let mlnew_end= `${mlen_date[0]}-${mlen_date[1]}-${mlen_date[2]}`
   
         
-    axios.get(`http://192.168.100.29:3001/api/orders?start_date=${mlnew_start}&end_date=${mlnew_end}`)
+    axios.get(`${process.env.SERVER_URL}/api/orders?start_date=${mlnew_start}&end_date=${mlnew_end}`)
     .then(res => {
     const lastmonthly = res.data;
     this.setState({ lastmonthly });
@@ -254,7 +255,7 @@ class  Dasboard extends React.Component {
   let ynew_end= `${yen_date[0]}-${yen_date[1]}-${yen_date[2]}`
 
       
-  axios.get(`http://192.168.100.29:3001/api/orders?start_date=${ynew_start}&end_date=${ynew_end}`)
+  axios.get(`${process.env.SERVER_URL}/api/orders?start_date=${ynew_start}&end_date=${ynew_end}`)
   .then(res => {
   const yearly = res.data;
   this.setState({ yearly });
@@ -282,7 +283,7 @@ class  Dasboard extends React.Component {
   let lynew_end= `${lyen_date[0]}-${lyen_date[1]}-${lyen_date[2]}`
 
       
-  axios.get(`http://192.168.100.29:3001/api/orders?start_date=${lynew_start}&end_date=${lynew_end}`)
+  axios.get(`${process.env.SERVER_URL}/api/orders?start_date=${lynew_start}&end_date=${lynew_end}`)
   .then(res => {
   const lastyearly = res.data;
   this.setState({ lastyearly });
