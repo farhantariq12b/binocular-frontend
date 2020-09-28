@@ -40,7 +40,7 @@ function InventoryPlaning() {
       </div>
       <div>
 
-      <div className="main-content">
+      <div>
         <Navbar props = {handleCallback} heading = {"Inventory Planning"}/> 
       </div>
       <div className="cart-row">

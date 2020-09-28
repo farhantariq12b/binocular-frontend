@@ -23,7 +23,7 @@ class SideNav extends React.Component {
       <ul>
         
         <li>
-        <Link href="/dashboard">
+        <Link href="/executivesummary">
           <button >Executive Summary</button>
         </Link>
         </li>
@@ -33,7 +33,7 @@ class SideNav extends React.Component {
           </Link>
         </li>
         <li>
-        <Link href="#">
+        <Link href="/merchandising">
           <button  >Merchandising</button>
           </Link>
         </li>
@@ -43,12 +43,12 @@ class SideNav extends React.Component {
           </Link>
         </li>
         <li>
-        <Link href="#">
+        <Link href="/planprofile">
           <button  >Plan Profile</button>
           </Link>
         </li>
         <li>
-        <Link href="#">
+        <Link href="/inventorybuy">
           <button  >Inventory Buy</button>
           </Link>
         </li>
