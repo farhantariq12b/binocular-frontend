@@ -1,5 +1,11 @@
+import React from 'react'
+import Link from 'next/link'
+class SideNav extends React.Component {
+  constructor (props) {
+    super(props);
+  }
+  render(){
 
-function SideNav() {
   return <div>
     <div className="logonav">
       <div className="logo">
@@ -15,27 +21,41 @@ function SideNav() {
     </div>
     <div className="sidelink">
       <ul>
+        
         <li>
-          <a href="#">Executive Summary</a>
+        <Link href="/executivesummary">
+          <button >Executive Summary</button>
+        </Link>
         </li>
         <li>
-          <a href="#">Inventory Planning</a>
+        <Link href="/inventoryplanning">
+          <button >Inventory Planning</button>
+          </Link>
         </li>
         <li>
-          <a href="#">Merchandising</a>
+        <Link href="/merchandising">
+          <button  >Merchandising</button>
+          </Link>
         </li>
         <li>
-          <a href="#">Pricing and Promotions</a>
+        <Link href="#">
+          <button  >Pricing and Promotions</button>
+          </Link>
         </li>
         <li>
-          <a href="#">Plan Profile</a>
+        <Link href="/planprofile">
+          <button  >Plan Profile</button>
+          </Link>
         </li>
         <li>
-          <a href="#">Inventory Buy</a>
+        <Link href="/inventorybuy">
+          <button  >Inventory Buy</button>
+          </Link>
         </li>
       </ul>
     </div>
   </div>
+}
 }
 
 export default SideNav

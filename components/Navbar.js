@@ -9,7 +9,7 @@ class Navbar extends React.Component {
   return <div>
     <div className="main-navbar">
       <div className="page-heading">
-        <h3>Executive Summary</h3>
+      <h3>{this.props.heading}</h3>
       </div>
       <div className="navbar-content">
       <div className="main-navbar-dropdown">
