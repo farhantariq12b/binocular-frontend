@@ -3,7 +3,7 @@ import { PieChart } from 'react-minimal-pie-chart';
 
 
 
-class FullCard extends React.Component{
+class Executive extends React.Component{
   constructor (props) {
     super(props);
   }
@@ -65,7 +65,7 @@ class FullCard extends React.Component{
 
 
     ///////////pie chart data////////////
-      const colours =['red','green','blue','lightblue','orange','gray','tan','cream','purple','orange','lightgray', ]
+      const colours =['red','green','blue','lightblue','orange','gray','tan','cream','purple','orange','lightgray', 'red','green','blue','lightblue','orange','gray','tan','cream','purple','orange','lightgray']
      
       projected.map((val , index)=>{
         let obj = {}
@@ -331,7 +331,7 @@ class FullCard extends React.Component{
               options={{
                 legend: { position: 'top', maxLines: 1 },
                 chartArea: {width: '100%', height: '80%'},
-                width: '1000',
+                width: '900',
                 height:'450',
                 hAxis: {
                   title: 'Date',
@@ -475,7 +475,7 @@ class FullCard extends React.Component{
             center={[50, 50]}
             data={datapie}
             labelPosition={50}
-            lengthAngle={360}
+            lengthAclassName="sidelink"ngle={360}
             lineWidth={15}
             paddingAngle={0}
             radius={50}
@@ -534,5 +534,5 @@ class FullCard extends React.Component{
     
   </div>
   )}
-            }
-export default FullCard
+        }
+export default Executive

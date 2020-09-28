@@ -6,6 +6,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: #E5E5E5;
 }
+button {
+  overflow: none;
+  cursor: pointer;
+}
 
 a {
   color: inherit;
@@ -69,8 +73,8 @@ a {
 .sidelink li {
   list-style-type: none;
 }
-.sidelink a {
-  border-left: 5px solid transparent;
+.sidelink button {
+  border-left: 5px solid #fff;
   padding: 7px 15px;
   margin: 7px 0;
   display: inline-block;
@@ -80,8 +84,12 @@ a {
   width: 100%;
   transition: 0.5s;
   color: #636363;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  outline: none;
 }
-.sidelink a:hover {
+.sidelink button:hover {
   color: #E47359;
   transition: 0.5s;
   border-left: 5px solid #E47359;
@@ -248,15 +256,6 @@ a {
 
 
 
-
-
-.graphs-part {
-  width: 75%;
-}
-.big-cart {
-  left: 60px;
-  position: relative;
-}
 
 
 
@@ -464,6 +463,16 @@ background-color:  #FFE2E2;
 
 
 
+.graphs-part {
+  width: 75%;
+}
+.big-cart {
+  left: 60px;
+  position: relative;
+}
+
+
+
 
 
 
@@ -536,10 +545,260 @@ background-color:  #FFE2E2;
 }
 
 
+/* Next page 2 */
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.cart-half-col {
+  width: 49%;
+  background-color: #fff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+}
+.cart-heading h3 {
+  font-size: 17px;
+}
+.cart-navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-image {
+  padding: 30px 0;
+}
+.cart-image img {
+  width: 100%;
+}
+.space-between {
+  justify-content: space-between;
+  position: relative;
+}
+.review-unit-btn {
+  margin: 30px 0;
+}
+.review-unit-btn button {
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 0 15px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #CBCBCB;
+  
+}
+.review-unit-btn button::after {
+  content: "";
+  background-color: #CBCBCB;
+  height: 1px;
+  width: 50%;
+  position: absolute;
+  left: 21%;
+  top: 48px;
+
+}
+.review-unit-btn button::before {
+  content: "";
+  background-color: #CBCBCB;
+  height: 1px;
+  width: 50%;
+  position: absolute;
+  right: 20%;
+  top: 48px;
+}
+.review-unit-btn span {
+  color: #7E7E7E;
+  font-weight: 500;
+}
+.colr-text-list ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.colr-text-list li {
+  list-style-type: none;
+  padding: 0 20px;
+  display: inline-block;
+}
+.colr-text-dots {
+  font-weight: 500;
+}
+.inventory-tabel-main {
+  width: 100%;
+  margin-top: 20px;
+}
+.inventory-tabel-main thead {
+  border-bottom: 1px solid #D5D5D5;
+}
+.inventory-tabel-main tr th {
+  font-weight: 500;
+  color: #464646;
+  padding-bottom: 7px;
+  font-size: 13px;
+}
+.inventory-tabel-main tbody tr {
+  border-bottom: 1px solid #F3F3F3;;
+  
+  font-weight: 500;
+  color: #7E7E7E;
+}
+.inventory-tabel-main tbody tr td {
+  padding: 5px 0;
+  font-size: 13px;
+}
+.inventory-tabel-main tbody tr:last-child {
+  border-bottom: none;
+}
+.see-all-btn {
+  margin-top: 15px;
+  text-align: right;
+}
+.see-all-btn button {
+  display: inline-block;
+  padding: 4px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #E47359;
+  color: #fff;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+.info-img {
+  padding-left: 10px;
+}
+.sales-analysis-section {
+  padding: 40px 0;
+  align-items: center;
+}
+.analysis-cart-img img {
+  max-width: 100%;
+}
+.analysis-details ul {
+  margin: 0;
+  padding: 0;
+}
+.analysis-details li {
+  display: inline-block;
+  padding: 0 15px;
+  list-style-type: none;
+}
+
+
+.b-widget1-bullet {
+  width: 15px;
+  height: 3px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.b-widget1-text-sub {
+  margin-right: 10px;
+  display: inline-block;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.analysis-tow-section {
+  padding: 40px 0;
+  border-bottom: 1px solid #E6E6E6;
+}
+.analysis-unit-sec {
+  margin-top: 20px;
+}
+.align-center {
+  align-items: center;
+}
+.line-table {
+  width: 15px;
+  height: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.bg-c-danger {
+  background-color: #E47359; 
+}
+.bg-c-primary {
+  background-color: #366BB1; 
+}
+.bg-c-info {
+  background-color: #ECB424;
+}
+.bg-c-solid-accent {
+ background-color:  #42AFB6;
+}
+.c-danger {
+  color:  #E47359;
+}
+.c-primary {
+  color: #366BB1;
+}
+.c-info {
+  color: #ECB424;
+}
+.c-solid-accent {
+  color: #42AFB6;
+}
+
+
+
+
+
+
+
+
+/* page 2 end section */
+.col-49 {
+  width: 45%;
+}
+.report-table-heading {
+  padding: 25px 0 20px 0;
+}
+.report-table-heading h3 {
+  font-size: 16px;
+  color: #464646;
+}
+.w-32 {
+  width: 32%;
+}
+
+/* SEARCH BAR */
+.search-part {
+  position: relative;
+}
+.search-part input {
+  width: 100%;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid #E6E6E6;
+  height: 35px;
+  outline: none;
+  padding: 0 15px;
+  font-style: italic;
+  color: #979797;
+  font-size: 14px;
+}
+
+.search-icon-img {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+
 
 @media (min-width:  1280px) and (max-width: 1566px) {
   .navbar-social li svg {
     width: 15px;
+  }
+  .record-link a {
+    font-size: 13px;
   }
   .page-heading {
     width: 20%;
@@ -549,23 +808,23 @@ background-color:  #FFE2E2;
   }
   .main-navbar-link a {
     font-size: 12px;
-    padding: 3px 7px;
+    padding: 3px 8px;
   }
   .page-heading h3 {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
   }
   .navbar-social li {
     padding: 0 10px;
   }
   .item-bg-1 p, .item-bg-2 p, .item-bg-3 p {
-    font-size: 15px;
+    font-size: 13px;
   }
   .revenue-part {
     width: 35%;
   }
   .revenue-title {
-    font-size: 37px;
+    font-size: 32px;
   }
   .record-btn {
     padding: 1px 12px;
@@ -576,7 +835,7 @@ background-color:  #FFE2E2;
     max-width: 100%;
   }
   .point-units h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .point-units p {
     padding: 7px 0;
@@ -586,7 +845,7 @@ background-color:  #FFE2E2;
     font-size: 55px;
   }
   .record-subtitle {
-    font-size: 12px;
+    font-size: 13px;
   }
   .dropdown-btn1 {
     width: 140px;
@@ -602,12 +861,9 @@ background-color:  #FFE2E2;
   .dropdown-list {
     top: 29px;
   }
-  .sidelink a {
+  .sidelink button {
     padding: 1px 14px;
     margin: 7px 0;
-  }
-  .record-link a {
-    font-size: 12px;
   }
 }
 @media (min-width:  1024px) and (max-width: 1279px) {
@@ -632,7 +888,7 @@ background-color:  #FFE2E2;
   .logo img, .menu img {
     width: 80%;
   }
-  .sidelink a {
+  .sidelink button {
     font-size: 15px;
     padding: 0px 15px;
   }

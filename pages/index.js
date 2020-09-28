@@ -1,5 +1,6 @@
 // import Head from 'next/Head'
-import Dashboard from '../components/dashboard.js'
+import Dashboard from './dashboard/index.js'
+
 export default function Home() {
   return (
     <div>

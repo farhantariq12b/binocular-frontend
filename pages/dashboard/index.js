@@ -1,12 +1,21 @@
-import SideNav from './SideNav.js'
-import Navbar from './Navbar.js'
-import FullCard from './FullCard.js'
+import SideNav from '../../components/SideNav.js'
+import Navbar from '../../components/Navbar.js'
+import Executive from '../executivesummary/index.js'
+import InventoryPlaning from '../inventoryplanning/index.js'
 import React from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
-import {setOrders} from '../redux/actions/main'  
+import {setOrders} from '../../redux/actions/main'  
 
-class  Dasboard extends React.Component {
+class Dashboard extends React.Component {
+  constructor (props) {
+    super(props);
+    this.toggleInventoryP = this.toggleInventoryP.bind(this)
+    // this.toggleInventory = this.toggleInventory.bind(this)
+    // this.toggleInventory = this.toggleInventory.bind(this)
+    // this.toggleInventory = this.toggleInventory.bind(this)
+    // this.toggleInventory = this.toggleInventory.bind(this)
+  }
   state = {
     orders: [],
     slow : 0,
@@ -20,6 +29,14 @@ class  Dasboard extends React.Component {
     lastweekly: [],
     lastmonthly:[],
     lastyearly:[],
+    /////for toggling components
+    executive: false,
+    inventoryP: false,
+    merchandasing: false,
+    price: false,
+    plan: false,
+    inventoryB: false
+    
   }
   //callback for datepicker
   handleCallback = (start, end)=> {
@@ -47,6 +64,24 @@ class  Dasboard extends React.Component {
       console.log(err)
     })
    
+  }
+  toggleExecutive(){
+    this.setState({executive:!this.state.executive})
+  }
+  toggleInventoryP(){
+    this.setState({inventoryP:!this.state.inventoryP})
+  }
+  toggleMerchandasing(){
+    this.setState({merchandasing:!this.state.merchandasing})
+  }
+  togglePrice(){
+    this.setState({price:!this.state.price})
+  }
+  toggleplan(){
+    this.setState({plan:!this.state.plan})
+  }
+  toggleInventoryB(){
+    this.setState({inventoryB:!this.state.inventoryB})
   }
 
   componentDidMount() {
@@ -299,11 +334,11 @@ class  Dasboard extends React.Component {
       <div>
       <div className="main-wrapper">
         <div className="sidenavbar">
-          <SideNav />
+          <SideNav onClick= {this.toggleInventoryP}/>
         </div>
         <div className="main-content">
-          <Navbar props = {this.handleCallback}/>
-          <FullCard props={this.state} />
+          <Navbar props = {this.handleCallback} heading = {"Executive Summary"}/>
+           <Executive props = {this.state}/>
         </div>
       </div>
    </div>
@@ -321,4 +356,4 @@ const mapDispatchToProps = {
   orders: setOrders
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dasboard)
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)
