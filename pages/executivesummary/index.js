@@ -511,33 +511,33 @@ class Executive extends React.Component{
                 </svg>
               </div>
               <p className="year-title">Last month</p>
-            </div>
-              <div className="item">
-                <div className="number-box item-bg-3">
-                  <p>{perrev} <span>%</span></p>
-                  <svg width="46" height="6" viewBox="0 0 46 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="21.5" y1="6" x2="21.5" y2="2.18557e-08" stroke="#FF5B5B"/>
-                    <line x1="24.5" y1="5" x2="24.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="27.5" y1="5" x2="27.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="30.5" y1="5" x2="30.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="33.5" y1="5" x2="33.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="36.5" y1="5" x2="36.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="39.5" y1="5" x2="39.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="42.5" y1="5" x2="42.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="0.5" y1="5" x2="0.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="3.5" y1="5" x2="3.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="6.5" y1="5" x2="6.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="9.5" y1="5" x2="9.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="12.5" y1="5" x2="12.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="15.5" y1="5" x2="15.5" y2="1" stroke="#CBCBCB"/>
-                    <line x1="18.5" y1="5" x2="18.5" y2="1" stroke="#FF5B5B"/>
-                    <rect x="18" y="1" width="4" height="4" fill="#FF5B5B" fill-opacity="0.4"/>
-                  </svg>
+              </div>
+                <div className="item">
+                  <div className="number-box item-bg-3">
+                    <p>{perrev} <span>%</span></p>
+                    <svg width="46" height="6" viewBox="0 0 46 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="21.5" y1="6" x2="21.5" y2="2.18557e-08" stroke="#FF5B5B"/>
+                      <line x1="24.5" y1="5" x2="24.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="27.5" y1="5" x2="27.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="30.5" y1="5" x2="30.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="33.5" y1="5" x2="33.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="36.5" y1="5" x2="36.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="39.5" y1="5" x2="39.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="42.5" y1="5" x2="42.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="0.5" y1="5" x2="0.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="3.5" y1="5" x2="3.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="6.5" y1="5" x2="6.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="9.5" y1="5" x2="9.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="12.5" y1="5" x2="12.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="15.5" y1="5" x2="15.5" y2="1" stroke="#CBCBCB"/>
+                      <line x1="18.5" y1="5" x2="18.5" y2="1" stroke="#FF5B5B"/>
+                      <rect x="18" y="1" width="4" height="4" fill="#FF5B5B" fill-opacity="0.4"/>
+                    </svg>
+                  </div>
+                  <p className="year-title">Last week</p>
                 </div>
-                <p className="year-title">Last week</p>
               </div>
             </div>
-          </div>
           <div className="total-revenue">
             <p className="sub-title light-violet">Total Volume</p>
             <h3 className="revenue-title">
@@ -626,11 +626,43 @@ class Executive extends React.Component{
 
           {/* <img src="cart-big.png" alt="Cart"></img> */}
 
+
+          <Chart
+            width={'100%'}
+            height={'300'}
+            chartType="Line"
+            loader={<div>Loading Chart</div>}
+            data={dataTopass}
+            options={{
+              legend: { position: 'none', maxLines: 1 },
+              chartArea: {width: '100%', height: '85%'},
+              chart: {
+                // title:
+                //   'Average Temperatures and Daylight in Iceland Throughout the Year',
+              },
+              width: 900,
+              height: 450,
+              series: {
+                // Gives each series an axis name that matches the Y-axis below.
+                0: { axis: 'Revenue' },
+                1: { axis: 'Units' },
+              },
+              axes: {
+                // Adds labels to each axis; they don't have to match the axis names.
+                y: {
+                  Revenue: { label: 'Revenue' },
+                  Units: { label: 'Units' },
+                },
+              },
+            }}
+            rootProps={{ 'data-testid': '4' }}
+          />
+        {/* 
           <Chart
 
               width={'100%'}
               height={'300px'}
-              chartType="LineChart"
+              chartType="Line"
               loader={<div>Loading Chart</div>}
               data={dataTopass}
               options={{
@@ -652,7 +684,7 @@ class Executive extends React.Component{
                 },
               }}
               rootProps={{ 'data-testid': '2' }}
-            />
+            /> */}
                       
           </div>
           
