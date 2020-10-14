@@ -16,8 +16,8 @@ class MyApp extends React.Component {
     const { Component , appProps }= this.props;
 
     return(
-      <Provider store={store}>
-        <Component {...appProps}/>
+      <Provider store={store}> 
+           <Component {...appProps}/>
       </Provider>
     )
   }

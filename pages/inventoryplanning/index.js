@@ -2,6 +2,8 @@ import SideNav from '../../components/SideNav.js'
 import Navbar from '../../components/Navbar.js'
 import Chart from "react-google-charts";
 import { PieChart } from 'react-minimal-pie-chart';
+import React , {useEffect} from "react"
+import Router from 'next/router'
  //callback for datepicker
 
 
@@ -33,6 +35,14 @@ import { PieChart } from 'react-minimal-pie-chart';
 }
 
 function InventoryPlaning() {
+
+  useEffect(() => { 
+    const jwt_token = localStorage.getItem("authToken");
+    if (!jwt_token) {
+      Router.push('/authentication/signin')
+    } 
+  }
+  , []);
     return <div className="main-wrapper" >
 
       <div className="sidenavbar">

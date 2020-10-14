@@ -1,6 +1,7 @@
 import SideNav from '../../../components/SideNav.js'
 import Navbar from '../../../components/Navbar.js'
-
+import React , {useEffect} from "react"
+import Router from 'next/router'
 //callback for datepicker
 
 
@@ -31,6 +32,13 @@ const handleCallback = (start, end)=> {
    
   }
 function Merchandising() {
+  useEffect(() => { 
+    const jwt_token = localStorage.getItem("authToken");
+    if (!jwt_token) {
+      Router.push('/authentication/signin')
+    } 
+  }
+  , []);
     return <div className= "main-wrapper">
          <div className="sidenavbar">
         <SideNav />
