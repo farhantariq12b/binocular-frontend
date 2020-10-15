@@ -402,9 +402,9 @@ class Executive extends React.Component{
         })  
 
         let perrev  = 0
-        perrev  = ((weekrev/lastweekrev)*100)
+        // perrev  = (((weekrev/lastweekrev)*100))
         let perunit  = 0
-        perunit  = ((weekunit/lastweekunit)*100)
+        // perunit  = ((weekunit/lastweekunit)*100)
       
 
         //////////////monthly comparision
@@ -421,9 +421,9 @@ class Executive extends React.Component{
           lastmonthunit += (val.quantity*1 )
         }) 
         let mperrev  = 0
-        mperrev =((monthrev/lastmonthrev)*100)
+        // mperrev =((monthrev/lastmonthrev)*100)
         let mperunit  = 0
-        mperunit =((monthunit/lastmonthunit)*100)
+        // mperunit =((monthunit/lastmonthunit)*100)
         
         //////////////yearly comparision
         let yearlyrev = 0
@@ -629,18 +629,18 @@ class Executive extends React.Component{
 
           <Chart
             width={'100%'}
-            height={'300'}
+            height={'350'}
             chartType="Line"
             loader={<div>Loading Chart</div>}
             data={dataTopass}
             options={{
               legend: { position: 'none', maxLines: 1 },
-              chartArea: {width: '100%', height: '85%'},
+              chartArea: {width: '90%', height: '85%'},
               chart: {
                 // title:
                 //   'Average Temperatures and Daylight in Iceland Throughout the Year',
               },
-              width: 900,
+              width: '1%',
               height: 450,
               series: {
                 // Gives each series an axis name that matches the Y-axis below.
@@ -706,6 +706,7 @@ class Executive extends React.Component{
         </div>
       </div>
       <div className="flex">
+        <div className = "flex-reset">
         <div className="record-link">
           <a href="">
              On-hand inventory
@@ -730,9 +731,11 @@ class Executive extends React.Component{
               </li>
             </ul>
           </div>
+          </div>
         </div>
       </div>
       <div className="flex">
+        <div className= "flex-reset">
         <div className="point-limit">
           <div className="point-units">
             <p>Units</p>
@@ -766,6 +769,7 @@ class Executive extends React.Component{
             </h3>
           </div>
         </div>
+      </div>
       </div>
     </div>
     <div className="third-half-card full-card">
