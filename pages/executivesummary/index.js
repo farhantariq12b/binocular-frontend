@@ -1,16 +1,21 @@
 import Chart from "react-google-charts";
 import { PieChart } from 'react-minimal-pie-chart';
+import Head from 'next/head';
 import SideNav from '../../components/SideNav.js'
 import Navbar from '../../components/Navbar.js'
 import React from 'react';
 import axios from 'axios'; 
-import ReactApexChart from "react-apexcharts"
+import dynamic from 'next/dynamic';
+const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 
 
 class Executive extends React.Component{
   constructor (props) {
     super(props);
+    if (typeof window === 'undefined') {
+      global.window = {}
+  }
   }
   state = {
     orders: [],
@@ -62,12 +67,8 @@ class Executive extends React.Component{
 
   }
 
-
-
-
-
-
   componentDidMount() {
+   
     // let ss_date = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
     // let se_date = new Date()
     // var s_dateString = new Date(ss_date.getTime() - (ss_date.getTimezoneOffset() * 60000 ))
@@ -340,6 +341,8 @@ class Executive extends React.Component{
     }
 
   /////// creating main line chart data 
+
+    
     orders.map((val)=>{  
       let arrayRevenue =[];
       arrayRevenue.push(val.create_date)
@@ -454,15 +457,15 @@ class Executive extends React.Component{
 
         ///////chart configs
         let series = [{
-          name: 'TEAM A',
-          type: 'column',
+          name: 'REVENUE',
+          type: 'bar',
           data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
         }, {
-          name: 'TEAM B',
+          name: '% to PLAN',
           type: 'area',
           data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
         }, {
-          name: 'TEAM C',
+          name: 'FORECAST SALES',
           type: 'line',
           data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
         }]
@@ -478,7 +481,7 @@ class Executive extends React.Component{
           },
           plotOptions: {
             bar: {
-              columnWidth: '50%'
+              columnWidth: '80%'
             }
           },
           
@@ -504,7 +507,7 @@ class Executive extends React.Component{
           },
           yaxis: {
             title: {
-              text: 'Points',
+              text: 'Units',
             },
             min: 0
           },
@@ -521,8 +524,8 @@ class Executive extends React.Component{
               }
             }
           }
-        };
-  
+       
+        }
  
 
   return (
@@ -763,7 +766,10 @@ class Executive extends React.Component{
               }}
               rootProps={{ 'data-testid': '2' }}
             /> */}
-          <ReactApexChart options={options} series={series} type="line" height={450} />
+             
+              <ReactApexChart options={options} series={series} type="line" height={450}  />
+            
+         
     
           </div>
           
