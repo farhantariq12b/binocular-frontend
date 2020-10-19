@@ -5,20 +5,23 @@ import React from "react"
 import '../styles/globals.css'
 import 'bootstrap-daterangepicker/daterangepicker.css';
 import store from "../redux/store"
+import { AuthProvider } from '../contexts/Authprov'
+
 class MyApp extends React.Component {
-  static async  getInitialProps({ Component,ctx}){
+  static async  getInitialProps({ Component,ctx}){   
     const appProps = Component.getInitialProps ?  await Component.getInitialProps(ctx): {};
     return{appProps :  appProps}
   }
-  
 
   render(){
     const { Component , appProps }= this.props;
 
     return(
-      <Provider store={store}> 
-           <Component {...appProps}/>
-      </Provider>
+
+        <Provider store={store}> 
+            <Component {...appProps}/>
+        </Provider>
+     
     )
   }
 
@@ -26,4 +29,4 @@ class MyApp extends React.Component {
 
 const makeStore =()=>  store;
 
-export default withRedux(makeStore)(MyApp) 
+export default AuthProvider( withRedux(makeStore)(MyApp) )

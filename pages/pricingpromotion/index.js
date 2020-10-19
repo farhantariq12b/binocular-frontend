@@ -31,20 +31,14 @@ const handleCallback = (start, end)=> {
    
   }
 function Price() {
-  useEffect(() => { 
-    const jwt_token = localStorage.getItem("authToken");
-    if (!jwt_token) {
-      Router.push('/authentication/signin')
-    } 
-  }
-  , []);
+ 
     return <div className="main-wrapper">
          <div className="sidenavbar">
         <SideNav />
       </div>
       <div className="nav-size">
         <div >
-            <Navbar props = {handleCallback} heading = {"Plan Profile"}/> 
+            <Navbar props = {handleCallback} heading = {"Pricing Promotion"}/> 
         </div>
    
         <div className="pricing-promotions-page full-card">

@@ -1,4 +1,4 @@
-import React , {useState} from "react"
+import React , {useState,  useContext } from "react"
 import Link from 'next/link'
 import Axios from "axios"
 import { useRouter } from 'next/router'
@@ -10,9 +10,6 @@ import { min } from "date-fns"
 function SignUp() {
   const router = useRouter()
   const {register ,handleSubmit,errors } =useForm();
-
- 
-
     const [state , setState] = useState({
       user:"",
       password:"",
@@ -48,6 +45,7 @@ function SignUp() {
       });
       
     }
+
     const onSubmit = data =>  userReq(state);
     // const handleSubmit=(e)=>{
     //     e.preventDefault()

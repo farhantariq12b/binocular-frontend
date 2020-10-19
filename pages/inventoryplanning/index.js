@@ -36,13 +36,6 @@ import Router from 'next/router'
 
 function InventoryPlaning() {
 
-  useEffect(() => { 
-    const jwt_token = localStorage.getItem("authToken");
-    if (!jwt_token) {
-      Router.push('/authentication/signin')
-    } 
-  }
-  , []);
     return <div className="main-wrapper" >
 
       <div className="sidenavbar">

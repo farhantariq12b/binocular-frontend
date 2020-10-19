@@ -6,12 +6,15 @@ import InventoryPlaning from '../inventoryplanning/index.js'
 import React from 'react';
 import axios from 'axios'; 
 import Router from 'next/router'
+import {AuthProvider} from "../../contexts/Authprov"
 
 
 
 class Executive extends React.Component{
   constructor (props) {
     super(props);
+   
+    
   }
   state = {
     orders: [],
@@ -32,7 +35,8 @@ class Executive extends React.Component{
     merchandasing: false,
     price: false,
     plan: false,
-    inventoryB: false
+    inventoryB: false,
+
     
   }
   handleCallback = (start, end)=> {
@@ -63,10 +67,10 @@ class Executive extends React.Component{
   }
 
   componentDidMount() {
-    const jwt_token = localStorage.getItem("authToken");
-    if (!jwt_token) {
-      Router.push('/authentication/signin')
-    } 
+    
+   
+    
+   
     // let ss_date = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
     // let se_date = new Date()
     // var s_dateString = new Date(ss_date.getTime() - (ss_date.getTimezoneOffset() * 60000 ))
@@ -451,9 +455,11 @@ class Executive extends React.Component{
         yperunit  = ((yearlyunit/100)*lastyearlyunit)
       
 
-
+        
   return (
+    
   <div className = "main-wrapper">
+ 
       <div className="sidenavbar">
           <SideNav />
       </div>
@@ -878,7 +884,7 @@ class Executive extends React.Component{
     </div>
     </div>
     </div>
-  </div>
-  )}
-        }
-export default Executive
+   </div>
+)}}
+        
+export default AuthProvider(Executive) 
