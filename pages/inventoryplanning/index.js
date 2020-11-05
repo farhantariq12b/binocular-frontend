@@ -33,16 +33,15 @@ import { PieChart } from 'react-minimal-pie-chart';
 }
 
 function InventoryPlaning() {
-    return <div className="main-wrapper" >
-
+    return (
+    <div className="main-wrapper" >
       <div className="sidenavbar">
         <SideNav />
       </div>
-      <div>
-
-      <div>
+     <div className="main-content">
+     
         <Navbar props = {handleCallback} heading = {"Inventory Planning"}/> 
-      </div>
+      
       <div className="cart-row">
       
         <div className="cart-half-col">
@@ -56,7 +55,7 @@ function InventoryPlaning() {
               </div>
               <div className="main-navbar-dropdown">
               
-                <div className="dropdown-items">
+                {/* <div className="dropdown-items">
                   <button className="dropdown-btn1" type="text">Division (All)</button>
                   <ul className="dropdown-list">
                     <li>
@@ -72,7 +71,7 @@ function InventoryPlaning() {
                       <a href="#">dropdown 04</a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
               <div className="main-navbar-dropdown">
             <div className="dropdown-items">
@@ -180,7 +179,7 @@ function InventoryPlaning() {
               <div className="cart-heading">
                 <h3>Inventory Needs</h3>
               </div>
-              <div className="main-navbar-dropdown">
+              {/* <div className="main-navbar-dropdown">
                 <div className="dropdown-items">
                   <button className="dropdown-btn1" type="text">Division (All)</button>
                   <ul className="dropdown-list">
@@ -198,7 +197,7 @@ function InventoryPlaning() {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
               <div className="main-navbar-dropdown">
               <div className="dropdown-items">
                 <button className="dropdown-btn1" type="text">Division (All)</button>
@@ -245,9 +244,9 @@ function InventoryPlaning() {
               ]}
               options={{
                 legend: { position: 'none', maxLines: 1 },
-                chartArea: {width: '100%', height: '80%'},
-                width: '600',
-                height:'330',
+                chartArea: {width: '90%', height: '85%'},
+                width: '1%',
+                height:'450',
                 hAxis: {
                   // title: 'Date',
                   // format: 'MMM dd, yyyy',
@@ -469,7 +468,7 @@ function InventoryPlaning() {
               <div className="cart-heading">
                 <h3>Sales Analysis</h3>
               </div>
-              <div className="main-navbar-dropdown">
+              {/* <div className="main-navbar-dropdown">
                 <div className="dropdown-items">
                   <button className="dropdown-btn1" type="text">Division (All)</button>
                   <ul className="dropdown-list">
@@ -487,7 +486,7 @@ function InventoryPlaning() {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
               <div className="main-navbar-dropdown">
               <div className="dropdown-items">
                 <button className="dropdown-btn1" type="text">Division (All)</button>
@@ -621,45 +620,28 @@ function InventoryPlaning() {
                 <img className="search-icon-img" src="icon-search.svg"></img>
               </div>
             </div>
-            <div className="item-dropdown w-32">
-              <div className="dropdown-items">
-                <button className="dropdown-btn1" type="text">Division (All)</button>
-                <ul className="dropdown-list">
-                  <li>
-                    <a href="#">dropdown-item</a>
-                  </li>
-                  <li>
-                    <a href="#">dropdown-item 01</a>
-                  </li>
-                  <li>
-                    <a href="#">dropdown-item 03</a>
-                  </li>
-                  <li>
-                    <a href="#">dropdown 04</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="item-dropdown w-32">
-              <div className="dropdown-items">
-                <button className="dropdown-btn1" type="text">Division (All)</button>
-                <ul className="dropdown-list">
-                  <li>
-                    <a href="#">dropdown-item</a>
-                  </li>
-                  <li>
-                    <a href="#">dropdown-item 01</a>
-                  </li>
-                  <li>
-                    <a href="#">dropdown-item 03</a>
-                  </li>
-                  <li>
-                    <a href="#">dropdown 04</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+           
           </div>
+          <div className="item-dropdown w-32">
+              <div className="dropdown-items">
+                <button className="dropdown-btn1" type="text">Division (All)</button>
+                <ul className="dropdown-list">
+                  <li>
+                    <a href="#">dropdown-item</a>
+                  </li>
+                  <li>
+                    <a href="#">dropdown-item 01</a>
+                  </li>
+                  <li>
+                    <a href="#">dropdown-item 03</a>
+                  </li>
+                  <li>
+                    <a href="#">dropdown 04</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          
           </div>
         </div>
         <div className="flex space-between">
@@ -757,6 +739,7 @@ function InventoryPlaning() {
       </div>
       </div>
     </div>
-  }
+    
+    )}
   
   export default InventoryPlaning

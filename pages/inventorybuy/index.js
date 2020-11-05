@@ -32,14 +32,15 @@ const handleCallback = (start, end)=> {
   }
 function InventoryBuy() {
 
-    return <div className = "main-wrapper">
+    return(
+       <div className = "main-wrapper">
         <div className="sidenavbar">
         <SideNav />
       </div>
       <div className="nav-size">
         <div >
             <Navbar props = {handleCallback} heading = {"Inventory Buy"}/> 
-        </div>
+      
 
       <div className="inventory-page">
         <div className="inventory-page-header">
@@ -242,7 +243,7 @@ function InventoryBuy() {
       </div>
       </div>
       </div>
-     
-}
+      </div>
+    )}
 
 export default InventoryBuy
