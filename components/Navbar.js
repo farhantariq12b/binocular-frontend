@@ -1,4 +1,4 @@
-import MyComponent from "./datepicker"
+import Datepicker from "./datepicker"
 import React from "react"
 class Navbar extends React.Component {
   constructor (props) {
@@ -13,7 +13,7 @@ class Navbar extends React.Component {
       </div>
       <div className="navbar-content">
       <div className="main-navbar-dropdown">
-          <div className="dropdown-items">
+          <div className="dropdown-items w-full">
             <button className="dropdown-btn1" type="text">Division (All)</button>
             <ul className="dropdown-list">
               <li>
@@ -29,27 +29,14 @@ class Navbar extends React.Component {
                 <a href="#">dropdown 04</a>
               </li>
             </ul>
-          </div>  {/* <ul>
-            <li>
-              <a href="#">Week</a>
-            </li>
-            <li>
-              <a href="#">Month</a>
-            </li>
-            <li>
-              <a href="#">Year</a>
-            </li>
-            <li>
-              <a href="#">Custom</a>
-            </li>
-          </ul> */}
+          </div> 
         </div>
         <div className="main-navbar-link">
-          <MyComponent callbackhandle={this.props.props}/>
+          <Datepicker this={this.props.this} callbackhandle={this.props.handleCallback}/>
         </div>
         <div className="main-navbar-dropdown">
-          <div className="dropdown-items">
-            <button className="dropdown-btn1" type="text">Division (All)</button>
+          <div className="dropdown-items w-full">
+            <button className="dropdown-btn1 " type="text">Division (All)</button>
             <ul className="dropdown-list">
               <li>
                 <a href="#">dropdown-item</a>

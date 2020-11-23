@@ -1,35 +1,6 @@
 import SideNav from '../../components/SideNav.js'
 import Navbar from '../../components/Navbar.js'
 
-//callback for datepicker
-
-
-const handleCallback = (start, end)=> {
-    // console.log(process.env.SERVER_URL,"process")
-    
-    // var Difference_In_Time =end._d.getTime()- start._d.getTime() ; 
-    // var Difference_In_Days =Math.ceil( Difference_In_Time / (1000 * 3600 * 24)); 
-  
-  
-    // let s_date = start._d;
-    // let d = new Date(s_date);
-    // let data = "";
-    // for(var i=0; i<Difference_In_Days; i++ ){
-    //   let format = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
-    //   data = data.concat(`'${format}'${i >= Difference_In_Days - 1 ? '' : ',' }`);
-    //   d.setDate(d.getDate() + 1);  
-      
-    // }
-    // axios.get(`${process.env.SERVER_URL}/api/orders?dates=${data}`)
-    // .then(res => {
-    //  const orders  = res.data;
-    //  this.setState({ orders });
-    // })
-    // .catch(err =>{
-    //   console.log(err)
-    // })
-   
-  }
 function Merchandising() {
     return <div className= "main-wrapper">
          <div className="sidenavbar">
@@ -37,7 +8,7 @@ function Merchandising() {
       </div>
       <div className="nav-size">
         <div >
-            <Navbar props = {handleCallback} heading = {"Merchandising"}/> 
+            <Navbar heading = {"Merchandising"}/> 
         </div>
       <div className="cart-row flext space-between">
         <div className="cart-half-col">
