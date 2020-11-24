@@ -9,8 +9,8 @@ class Dashboard extends React.Component {
   }
 
   state = {
-    sideNav: true,
-    navButton: false
+    sideNav: false,
+    navButton: true
   }
   
 
