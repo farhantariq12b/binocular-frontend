@@ -1,18 +1,13 @@
 import SideNav from '../../components/SideNav.js'
 import Navbar from '../../components/Navbar.js'
+import Dashboard from "../dashboard/index"
 
 //callback for datepicker
 
 function InventoryBuy() {
 
     return(
-       <div className = "main-wrapper">
-        <div className="sidenavbar">
-        <SideNav />
-      </div>
-      <div className="nav-size">
-        <div >
-          <Navbar  heading = {"Inventory Buy"}/> 
+      <Dashboard heading={"Inventory Buy"}>
       <div className="inventory-page">
         <div className="inventory-page-header">
           <div className="flex space-between align-center">
@@ -212,9 +207,7 @@ function InventoryBuy() {
           </table>
         </div>
       </div>
-      </div>
-      </div>
-      </div>
+      </Dashboard>
     )}
 
 export default InventoryBuy

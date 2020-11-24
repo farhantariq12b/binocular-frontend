@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ordersBetweenDates , initialunits} from './api_requests/api'
 
 export const getDataBetweenTwoDates = (startDate , endDate) => {
   let ls_date = new Date(Date.now() - startDate * 24 * 60 * 60 * 1000)
@@ -13,13 +14,7 @@ export const getDataBetweenTwoDates = (startDate , endDate) => {
     .split("T")[0];
   let len_date = e_dateString.split("-")
   let lnew_end = `${len_date[0]}-${len_date[1]}-${len_date[2]}`
-  return axios.get(`${process.env.SERVER_URL}/api/orders?start_date=${lnew_start}&end_date=${lnew_end}`)
-    .then(res => {
-      return res.data;
-    })
-    .catch(err => {
-      console.log(err)
-    })
+  return ordersBetweenDates(lnew_start, lnew_end)
 }
 
 export const handleCallback = (start, end , that) => {
@@ -44,13 +39,7 @@ export const handleCallback = (start, end , that) => {
 }
  
 export const getInitialUnits = () => {
-  return axios.get(`${process.env.SERVER_URL}/api/orders`)
-  .then(res => {
-    return  res.data;
-  })
-  .catch(err => {
-    console.log(err)
-  })
+  return initialunits();
 }
 
 //function to add commas in total revenue

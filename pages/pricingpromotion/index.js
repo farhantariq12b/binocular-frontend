@@ -1,17 +1,11 @@
 import SideNav from '../../components/SideNav.js'
 import Navbar from '../../components/Navbar.js'
+import Dashboard from "../dashboard/index"
 
 
 function Price() {
-    return <div className="main-wrapper">
-         <div className="sidenavbar">
-        <SideNav />
-      </div>
-      <div className="nav-size">
-        <div >
-            <Navbar heading = {"Plan Profile"}/> 
-        </div>
-   
+    return (
+        <Dashboard  heading={"Price Promotion"}>
         <div className="pricing-promotions-page full-card">
       <div className="pricing-promotions-header">
         <div className="flex space-between align-center">
@@ -251,11 +245,7 @@ function Price() {
         </div>
       </div>
       </div>
-
-
-
-  </div>
-  </div>
-}
+      </Dashboard>
+    )}
   
   export default Price

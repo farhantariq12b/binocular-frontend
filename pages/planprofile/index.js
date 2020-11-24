@@ -1,16 +1,10 @@
 import SideNav from '../../components/SideNav.js'
 import Navbar from '../../components/Navbar.js'
+import  Dashboard from '../dashboard/index'
 
 function Plan() {
-    return <div className="main-wrapper">
-         <div className="sidenavbar">
-        <SideNav />
-      </div>
-      <div className="nav-size">
-        <div >
-            <Navbar heading = {"Plan Profile"}/> 
-        </div>
-   
+    return (
+      <Dashboard  heading={"Plan Profile"}>
       <div className="plan-profile-page full-card">
         <div className="plan-profile-header">
           <div className="flex space-between align-center">
@@ -140,9 +134,7 @@ function Plan() {
           </div>
         </div>
       </div>
-     
-  </div>
-  </div>
-  }
+      </Dashboard>
+    )}
   
   export default Plan

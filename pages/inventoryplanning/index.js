@@ -2,17 +2,11 @@ import SideNav from '../../components/SideNav.js'
 import Navbar from '../../components/Navbar.js'
 import Chart from "react-google-charts";
 import { PieChart } from 'react-minimal-pie-chart';
+import Dashboard from "../dashboard/index"
 
 function InventoryPlaning() {
     return (
-    <div className="main-wrapper" >
-      <div className="sidenavbar">
-        <SideNav />
-      </div>
-     <div className="main-content">
-    
-        <Navbar  heading = {"Inventory Planning"}/> 
-      
+      <Dashboard heading={"Inventory Plan"}>
       <div className="cart-row">
       
         <div className="cart-half-col">
@@ -668,10 +662,8 @@ function InventoryPlaning() {
           </div>
         </div>
         </div>
-      </div>
-      </div>
     </div>
-    
+    </Dashboard>
     )}
   
   export default InventoryPlaning

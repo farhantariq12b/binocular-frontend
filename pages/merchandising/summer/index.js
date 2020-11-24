@@ -1,18 +1,12 @@
 
 import SideNav from '../../../components/SideNav.js'
 import Navbar from '../../../components/Navbar.js'
+import Dashboard from "../../dashboard/index"
 
 
 function Merchandising() {
-    return <div className= "main-wrapper">
-         <div className="sidenavbar">
-        <SideNav />
-      </div>
-      <div className="nav-size">
-        <div >
-            <Navbar heading = {"Merchandising Summer"}/> 
-        </div>
-     
+    return (
+     <Dashboard heading={"Merchandising Summer"}>
     <div className="full-card drage-drop">
       <div className="drap-drop-header">
         <div className="flex space-between">
@@ -763,9 +757,7 @@ function Merchandising() {
         </div>
       </div>
       </div>
-
-     </div>
-      </div>
- }
+      </Dashboard>
+    )}
 
  export default  Merchandising

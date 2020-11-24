@@ -1,11 +1,9 @@
 import Chart from "react-google-charts";
 import { PieChart } from 'react-minimal-pie-chart';
-import Head from 'next/head';
-import SideNav from '../../components/SideNav.js'
-import Navbar from '../../components/Navbar.js'
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { getDataBetweenTwoDates , getInitialUnits , numberWithCommas , handleCallback }  from '../../helpers/helpers'
+import Dashboard from "../dashboard/index.js";
 const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 class Executive extends React.Component {
@@ -217,12 +215,7 @@ class Executive extends React.Component {
     }
 
     return (
-      <div className="main-wrapper">
-        <div className="sidenavbar">
-          <SideNav />
-        </div>
-        <div className="main-content">
-          <Navbar handleCallback={handleCallback} this={this} heading={"Executive Summary"} />
+      <Dashboard  handleCallback={handleCallback} this={this} heading={"Executive Summary"}>
           <div className="full-card">
             <div className="flex mob">
               <div className="revenue-part">
@@ -602,8 +595,7 @@ class Executive extends React.Component {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </Dashboard>
     )
   }
 }

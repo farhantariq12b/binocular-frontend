@@ -1,15 +1,10 @@
 import SideNav from '../../components/SideNav.js'
 import Navbar from '../../components/Navbar.js'
+import Dashboard from "../dashboard/index"
 
 function Merchandising() {
-    return <div className= "main-wrapper">
-         <div className="sidenavbar">
-        <SideNav />
-      </div>
-      <div className="nav-size">
-        <div >
-            <Navbar heading = {"Merchandising"}/> 
-        </div>
+    return(
+      <Dashboard  heading={"Merchandising Autumn"} >
       <div className="cart-row flext space-between">
         <div className="cart-half-col">
           <div className="page-headering-cart">
@@ -392,8 +387,7 @@ function Merchandising() {
           </div>
         </div>
       </div>
-     </div>
-      </div>
- }
+      </Dashboard>
+    )}
 
  export default  Merchandising
