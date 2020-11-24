@@ -6,8 +6,14 @@ class Navbar extends React.Component {
   }
  
   render(){
-  return <div>
+  return(
+  <div>
     <div className="main-navbar">
+      { this.props.navButton ? <div className="menu nav-btn" >
+        <a onClick={()=> {this.props.toggleSideNav()}}>
+          <img src="../nav-menu.png"></img>
+        </a>
+      </div> : ''}
       <div className="page-heading">
       <h3>{this.props.heading}</h3>
       </div>
@@ -84,7 +90,7 @@ class Navbar extends React.Component {
       </div>
     </div>
   </div>
-  }
+  )}
 }
 
 export default Navbar
