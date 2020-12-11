@@ -553,7 +553,7 @@ background-color:  #FFE2E2;
   top: 38px;
   background-color: #fff;
   margin: 0;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   padding: 5px 0 15px 0;
   border-radius: 5px;
   z-index: 99;
@@ -589,13 +589,13 @@ background-color:  #FFE2E2;
 .cart-half-col {
   width: 49%;
   background-color: #fff;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   padding: 30px;
   border-radius: 15px;
 }
 .cart-card {
   background-color: #fff;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   padding: 30px;
   border-radius: 15px;
   margin: 40px 0;
@@ -1102,9 +1102,9 @@ background-color:  #FFE2E2;
   margin: 0;
   padding: 0;
   background-color: #fff;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   padding: 15px 10px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   border: 1px solid #E9E9E9;
   position: absolute;
@@ -1465,7 +1465,7 @@ background-color:  #FFE2E2;
   background: #FFFFFF;
   border: 1px solid #E9E9E9;
   box-sizing: border-box;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   right: 0;
   top: 42px;
@@ -1779,5 +1779,18 @@ background-color:  #FFE2E2;
   .point-units p {
     font-size: 13px;
   }
+  .cart-row {
+    display: unset;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .cart-half-col {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .cart-navbar-header {
+
+    margin-bottom: 5px;
+}
   
 }
