@@ -2,46 +2,11 @@ import SideNav from '../../components/SideNav.js'
 import Navbar from '../../components/Navbar.js'
 import Chart from "react-google-charts";
 import { PieChart } from 'react-minimal-pie-chart';
- //callback for datepicker
-
-
- const handleCallback = (start, end)=> {
-  // console.log(process.env.SERVER_URL,"process")
-  
-  // var Difference_In_Time =end._d.getTime()- start._d.getTime() ; 
-  // var Difference_In_Days =Math.ceil( Difference_In_Time / (1000 * 3600 * 24)); 
-
-
-  // let s_date = start._d;
-  // let d = new Date(s_date);
-  // let data = "";
-  // for(var i=0; i<Difference_In_Days; i++ ){
-  //   let format = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
-  //   data = data.concat(`'${format}'${i >= Difference_In_Days - 1 ? '' : ',' }`);
-  //   d.setDate(d.getDate() + 1);  
-    
-  // }
-  // axios.get(`${process.env.SERVER_URL}/api/orders?dates=${data}`)
-  // .then(res => {
-  //  const orders  = res.data;
-  //  this.setState({ orders });
-  // })
-  // .catch(err =>{
-  //   console.log(err)
-  // })
- 
-}
+import Dashboard from "../dashboard/index"
 
 function InventoryPlaning() {
     return (
-    <div className="main-wrapper" >
-      <div className="sidenavbar">
-        <SideNav />
-      </div>
-     <div className="main-content">
-     
-        <Navbar props = {handleCallback} heading = {"Inventory Planning"}/> 
-      
+      <Dashboard heading={"Inventory Plan"}>
       <div className="cart-row">
       
         <div className="cart-half-col">
@@ -52,26 +17,6 @@ function InventoryPlaning() {
         
               <div className="cart-heading">
                 <h3>By Subcategory</h3>
-              </div>
-              <div className="main-navbar-dropdown">
-              
-                {/* <div className="dropdown-items">
-                  <button className="dropdown-btn1" type="text">Division (All)</button>
-                  <ul className="dropdown-list">
-                    <li>
-                      <a href="#">dropdown-item</a>
-                    </li>
-                    <li>
-                      <a href="#">dropdown-item 01</a>
-                    </li>
-                    <li>
-                      <a href="#">dropdown-item 03</a>
-                    </li>
-                    <li>
-                      <a href="#">dropdown 04</a>
-                    </li>
-                  </ul>
-                </div> */}
               </div>
               <div className="main-navbar-dropdown">
             <div className="dropdown-items">
@@ -179,25 +124,6 @@ function InventoryPlaning() {
               <div className="cart-heading">
                 <h3>Inventory Needs</h3>
               </div>
-              {/* <div className="main-navbar-dropdown">
-                <div className="dropdown-items">
-                  <button className="dropdown-btn1" type="text">Division (All)</button>
-                  <ul className="dropdown-list">
-                    <li>
-                      <a href="#">dropdown-item</a>
-                    </li>
-                    <li>
-                      <a href="#">dropdown-item 01</a>
-                    </li>
-                    <li>
-                      <a href="#">dropdown-item 03</a>
-                    </li>
-                    <li>
-                      <a href="#">dropdown 04</a>
-                    </li>
-                  </ul>
-                </div>
-              </div> */}
               <div className="main-navbar-dropdown">
               <div className="dropdown-items">
                 <button className="dropdown-btn1" type="text">Division (All)</button>
@@ -736,10 +662,8 @@ function InventoryPlaning() {
           </div>
         </div>
         </div>
-      </div>
-      </div>
     </div>
-    
+    </Dashboard>
     )}
   
   export default InventoryPlaning

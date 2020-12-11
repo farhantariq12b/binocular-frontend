@@ -8,25 +8,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 // you will also need the css that comes with bootstrap-daterangepicker
 import 'bootstrap-daterangepicker/daterangepicker.css';
  
- class MyComponent extends React.Component{
+ class DatePicker extends React.Component{
 
   constructor (props) {
     super(props);
-    this.handleCallback = this.props.callbackhandle.bind(this);
+    this.handleCallback = this.handleCallback.bind(this);
   }
-  
- 
-  render() {
-      ////////function callig call back in dash board
-      const  handleCallback=(start, end) =>{
-      console.log(props,"props in pop")
-      console.log(start._d , end._d)
-      let s_date = start._d
-      let e_date = end._d
-      this.props.handle(s_date,e_date)
-     
+  handleCallback (start, end ) {
+    let thisFromProps = this.props.this;
+    let s_date = start._d
+    let e_date = end._d
+    this.props.callbackhandle(s_date , e_date , thisFromProps) 
     }
-    
+  render() {
     return (
       <DateRangePicker 
       onCallback={this.handleCallback}
@@ -39,9 +33,4 @@ import 'bootstrap-daterangepicker/daterangepicker.css';
     );
   }
 }
-
-
-
-
-
-export default MyComponent
+export default DatePicker

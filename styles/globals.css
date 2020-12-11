@@ -44,7 +44,7 @@ a {
 
 .main-wrapper {
   padding: 30px;
-  min-height: 980px;
+  min-height: 100vh;
 }
 
 .main-wrapper {
@@ -1708,7 +1708,7 @@ background-color:  #FFE2E2;
 @media (min-width:  1024px) and (max-width: 1279px) {
 
   .main-wrapper {
-    padding: 17px;
+    padding: 20px;
   }
   .main-navbar {
     flex-wrap: wrap;
@@ -1791,6 +1791,291 @@ background-color:  #FFE2E2;
   .cart-navbar-header {
 
     margin-bottom: 5px;
+  }
 }
-  
+
+@media (min-width:  600px) and (max-width: 1023px) {
+  .sidenavbar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: none;
+    left: 0;
+    border-radius: 10px;
+    width: 32%;
+    z-index: 1;
+    box-shadow: 14px -20px 24px 3px rgba(0, 0, 0, 0.1);
+  }
+  .main-navbar {
+    flex-wrap: wrap;
+  }
+  .main-content{
+   width: 100%;
+  }
+  .page-heading {
+    width: 100%;
+  }
+  .navbar-content {
+    width: 100%;
+  }
+  .navbar-social li svg {
+    width: 15px;
+  }
+  .logo img, .menu img {
+    width: 80%;
+  }
+  .sidelink a {
+    font-size: 15px;
+    padding: 0px 15px;
+  }
+  .item-bg-1,.item-bg-2,.item-bg-3 {
+    padding: 5px 8px;
+    margin-right: 7px;
+  }
+  .revenue-title{
+    font-size: 32px;
+  }
+  .year-title{
+    font-size: 12px;
+  }
+  .dropdown-btn1{
+    width: auto;
+    white-space: nowrap;
+  }
+  .mob{
+    flex-direction: column;
+  }
+  .mob .revenue-part{
+    width: 100%;
+  }
+  .mob .graphs-part{
+    width: 100%;
+  }
+  .big-cart {
+    margin-top: 10px;
+    left: 0px;
+  }
+  .total-revenue{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .mob-heading{
+    width: 100%;
+  }
+  .total-revenue .flex {
+    justify-content: space-around;
+  }
+  .record-subtitle {
+    font-size: 10px;
+  }
+  .record-title{
+    font-size: 60px;
+  }
+  .record-btn{
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 17px;
+  }
+   .flex-reset .record-link{
+    width: 100%;
+  }
+  .flex-reset{
+    display:block;
+  }
+  .point-limit{
+    width: 100%;
+    margin-top: 0px;
+  }
+  .record-link{
+    width: 50%;
+    margin-top: 33px;
+  }
+  .record-dropdown {
+    width: 50%;
+    margin-top: 33px;
+  }
+  .third-half-card{
+    width: 100%;
+  }
+  .third-half-card .project-sale-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .project-cart{
+    width: 60%;
+    align-self: center;
+  }
+  .mob-nav{
+    flex-wrap: unset;
+  }
+  .point-units p {
+    font-size: 16px;
+  }
+  .second-half-card  {
+    width: 50%;
+  }
+  .cart-row {
+    display: unset;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .cart-half-col {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .cart-navbar-header {
+
+    margin-bottom: 5px;
+}
+}
+@media  (max-width: 599px) {
+  .sidenavbar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    border-radius: 0px;
+    width: 100%;
+    z-index: 1;
+  }
+  .main-navbar {
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+  }
+  .main-content{
+   width: 100%;
+   text-align: center;
+  }
+  .page-heading {
+    width: 100%;
+  }
+  .navbar-content {
+    display: unset;
+    width: 100%;
+  }
+  .navbar-social li svg {
+    width: 15px;
+  }
+  .logo img, .menu img {
+    width: 80%;
+  }
+  .sidelink a {
+    font-size: 15px;
+    padding: 0px 15px;
+  }
+  .item-bg-1,.item-bg-2,.item-bg-3 {
+    padding: 5px 8px;
+    margin-right: 7px;
+  }
+  .full-card {
+    padding: 20px;
+  }
+  .revenue-title{
+    font-size: 32px;
+  }
+  .year-title{
+    font-size: 12px;
+  }
+  .dropdown-btn1{
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .main-navbar-link{
+    margin: 0px;
+  }
+  .mob{
+    flex-direction: column;
+  }
+  .mob .revenue-part{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .mob .graphs-part{
+    width: 100%;
+  }
+  .big-cart {
+    margin-top: 10px;
+    left: 0px;
+  }
+  .total-revenue{
+    display: unset;
+  }
+  .mob-heading{
+    width: 100%;
+  }
+  .total-revenue .flex {
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  .record-subtitle {
+    font-size: 10px;
+  }
+  .record-title{
+    font-size: 60px;
+  }
+  .record-btn{
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 17px;
+  }
+   .flex-reset .record-link{
+    width: 100%;
+  }
+  .flex-reset{
+    display:block;
+  }
+  .point-limit{
+    width: 100%;
+    margin-top: 0px;
+  }
+  .record-link{
+    width: 50%;
+    margin-top: 33px;
+  }
+  .record-dropdown {
+    width: 50%;
+    margin-top: 33px;
+  }
+  .third-half-card{
+    width: 100%;
+  }
+  .phone{
+    flex-direction: column;
+  }
+  .third-half-card .project-sale-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .project-cart{
+    width: 60%;
+    align-self: center;
+  }
+  .w-full{
+    width: 100%;
+  }
+  .point-units p {
+    font-size: 16px;
+  }
+  .second-half-card  {
+    width: 100%;
+  }
+  .cart-row {
+    display: unset;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .cart-half-col {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .cart-navbar-header {
+    margin-bottom: 5px;
+}
 }

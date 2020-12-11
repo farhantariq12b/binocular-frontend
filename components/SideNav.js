@@ -4,8 +4,6 @@ class SideNav extends React.Component {
   constructor (props) {
     super(props);
   }
-
-
     css() {
     var x = document.getElementById("Sub");
     if (x.style.display === "none") {
