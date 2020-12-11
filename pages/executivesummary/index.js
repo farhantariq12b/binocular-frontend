@@ -386,7 +386,7 @@ class Executive extends React.Component {
               </div>
               <div className="graphs-part">
                 <div className="big-cart">
-                  <Chart
+                  {/* <Chart
                     width={'100%'}
                     height={'100%'}
                     className={'chart-css'}
@@ -416,8 +416,8 @@ class Executive extends React.Component {
                       },
                     }}
                     rootProps={{ 'data-testid': '4' }}
-                  />
-                  {/* <ReactApexChart options={options} series={series} type="line" height={450}  /> */}
+                  /> */}
+                  <ReactApexChart options={options} series={series} type="line" height={450}  />
                 </div>
               </div>
             </div>

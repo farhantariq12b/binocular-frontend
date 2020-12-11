@@ -13,23 +13,22 @@ class SideNav extends React.Component {
     }
   }
   render(){
-
-  return <div>
+  return (
+  <div>
     <div className="logonav">
       <div className="logo">
-        <a href="#">
+        <a href="/executivesummary">
           <img src="../logo.png"></img>
         </a>
       </div>
       <div className="menu">
-        <a href="#">
+        <a onClick={()=> {this.props.toggleSideNav()}}>
           <img src="../nav-menu.png"></img>
         </a>
       </div>
     </div>
     <div className="sidelink">
       <ul>
-        
         <li>
         <Link href="/executivesummary">
           <button >Executive Summary</button>
@@ -72,7 +71,7 @@ class SideNav extends React.Component {
       </ul>
     </div>
   </div>
-}
+  )}
 }
 
 export default SideNav
